@@ -234,7 +234,7 @@ int INET_HOOK(int af, unsigned int hook, struct rte_mbuf *mbuf,
     state.hook = hook;
     hook_list = af_inet_hooks(af, hook);
 
-    rte_rwlock_read_lock(af_inet_hook_lock(af));
+//    rte_rwlock_read_lock(af_inet_hook_lock(af));
 
     ops = list_entry(hook_list, struct inet_hook_ops, list);
 
@@ -251,7 +251,7 @@ repeat:
         }
     }
 
-    rte_rwlock_read_unlock(af_inet_hook_lock(af));
+//    rte_rwlock_read_unlock(af_inet_hook_lock(af));
 
     if (verdict == INET_ACCEPT || verdict == INET_STOP) {
         return okfn(mbuf);
