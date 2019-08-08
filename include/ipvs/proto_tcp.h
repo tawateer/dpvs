@@ -28,7 +28,7 @@ enum {
     TCP_OPT_SACK_PERM   = 4,
     TCP_OPT_SACK        = 5,
     TCP_OPT_TIMESTAMP   = 8,
-    TCP_OPT_ADDR        = 254, /* non-standard */
+    TCP_OPT_ADDR        = 200, /* non-standard */
 };
 
 #define TCP_OLEN_MSS                4
